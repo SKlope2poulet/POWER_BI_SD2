@@ -1,0 +1,54 @@
+Documentation Technique
+1. Modèle de Données
+L'application Power BI utilise plusieurs sources de données pour alimenter ses visualisations. Les principales données proviennent des fichiers CSV contenant les informations des logements existants et neufs, ainsi qu'une table de liaison qui associe les coordonnées géographiques (longitude et latitude) aux logements.
+
+Schéma du Modèle de Données :
+Table Logements Neufs (CSV) Contient les données des logements neufs, telles que :
+
+Identifiant logement
+Étiquette DPE
+Étiquette GES
+Consommation énergétique
+Type de logement
+Superficie
+Type d'énergie utilisé
+Table Logements Existants (CSV) Contient les données des logements existants, similaires à la table des logements neufs, mais avec des valeurs historiques et des informations de consommation passées.
+
+Table de Liaison BAN (Base Adresse Nationale)
+
+Identifiant logement
+Latitude
+Longitude
+Code postal
+Commune
+2. Schéma Visuel du Modèle de Données
+plaintext
+Copier
+Modifier
++---------------------+          +---------------------+          +-------------------------+
+|   Logements Neufs   | <------> |     Table de Liaison | <------> |  Logements Existants    |
+|  (Données Logement) |          |  (Longitude, Latitude)|          |  (Données Logement)     |
++---------------------+          +---------------------+          +-------------------------+
+     |  |  |  |                                |
+  +---------------------------------------------+
+  |      Lien basé sur l'identifiant du logement        |
+  +----------------------------------------------------+
+3. Sources de Données
+Les fichiers sources utilisés sont :
+
+dpe-v2-logements-neufs.csv
+dpe-v2-logements-existants.csv
+adresses-69.csv (contient les coordonnées géographiques)
+4. Fonctionnement des Tables
+Table Logements Neufs et Existants : Ces tables sont chargées dans Power BI via des fichiers CSV. Les colonnes pertinentes, telles que l'étiquette DPE, GES, la consommation énergétique, la surface, etc., sont extraites pour les visualisations.
+
+Table de Liaison BAN : Cette table permet de lier les logements aux coordonnées géographiques et à la commune. Elle est utilisée pour la carte de répartition géographique des logements.
+
+5. Processus ETL
+Les données sont extraites des fichiers CSV, nettoyées et transformées pour correspondre aux besoins de l'analyse dans Power BI. La transformation inclut :
+
+L'ajustement des formats de données (dates, nombres).
+La création de relations entre les tables (par exemple, en reliant les logements aux coordonnées géographiques via l'identifiant logement).
+La gestion des données manquantes ou aberrantes.
+6. Conclusion
+Le modèle de données est structuré de manière à faciliter les analyses croissantes, en fournissant un accès direct aux données énergétiques et géographiques des logements. Cela permet une analyse détaillée à l'échelle locale et globale pour des prises de décision éclairées.
