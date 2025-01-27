@@ -1,0 +1,25 @@
+Documentation Fonctionnelle
+1. Introduction
+Cette application Power BI a pour objectif d'analyser et de visualiser les caractéristiques des logements en fonction de leur étiquette DPE (Diagnostic de Performance Énergétique), étiquette GES (Gaz à Effet de Serre), ainsi que d'autres critères énergétiques et environnementaux. Elle permet de mieux comprendre la distribution des logements, leur consommation d'énergie, et d'obtenir des informations ciblées par commune.
+
+2. Visualisations Clés
+Graphique : Nombre de logements par étiquette DPE et GES Ce graphique permet de visualiser le nombre total de logements classés selon leur étiquette DPE et GES. Cela permet de suivre la répartition des logements en fonction de leur efficacité énergétique et de leur impact environnemental.
+
+Carte : Distribution des logements par étiquette DPE La carte permet de visualiser géographiquement la répartition des logements selon leur étiquette DPE. Il est possible de filtrer par commune pour observer la distribution des logements au niveau local.
+
+Graphiques : Consommation moyenne en KWh selon le type d'énergie Ce graphique représente la consommation d'énergie moyenne des logements, ventilée par type d'énergie. Cela permet d'analyser quel type d'énergie est le plus utilisé en fonction des différents types de logements.
+
+Graphiques : Consommation en KWh par mètre carré selon le type de logement Ce graphique permet de comparer la consommation d'énergie par mètre carré des différents types de logements, offrant ainsi une vision plus précise de l'efficacité énergétique des différents types de biens immobiliers.
+
+3. Fonctionnalités Principales
+Filtres Dynamiques L'utilisateur peut filtrer les visualisations en fonction de différents critères :
+
+Filtrage par Commune : Permet de visualiser les données à l'échelle locale, en sélectionnant une commune spécifique.
+Filtrage par étiquette DPE et GES : Permet de restreindre l'affichage des données à un certain type de performance énergétique ou de gaz à effet de serre.
+Filtrage par Type d'Énergie : Permet de comparer la consommation d'énergie en fonction du type d'énergie utilisé (électricité, gaz, etc.).
+Navigation Inter-Page L'application permet une navigation fluide entre les différentes pages. Chaque page présente une visualisation spécifique, et l'utilisateur peut naviguer entre elles pour obtenir des informations complémentaires.
+
+Rôles Utilisateurs L'application est configurée pour offrir un accès restreint basé sur les rôles des utilisateurs. Par exemple, un administrateur pourra accéder à l'ensemble des données tandis qu'un utilisateur classique pourra avoir un accès limité à certaines pages.
+
+4. Conclusion
+Cette application Power BI permet une analyse détaillée des logements en fonction de leur performance énergétique et de leur consommation d'énergie. Elle offre une vision à la fois géographique et statistique pour aider à la prise de décisions éclairées sur les politiques énergétiques et environnementales.
